@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe API Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="title">
+        <h1>Recipe API Documentation</h1>
+        <p>
+          Welcome to the Recipe API documentation. This guide will help you
+          understand how to use the API to access and manage recipes. You can
+          perform operations such as retrieving, adding, updating, and deleting
+          recipes.
+        </p>
+      </header>
+
+      <section id="baseUrl">
+        <h2>Base URL</h2>
+        <p>All API requests should be made to the following base URL:</p>
+        <p><strong>http://your-api-url.com/api</strong></p>
+        <p>This base URL serves as the root endpoint for all API operations.</p>
+      </section>
+
+      <section class="endPoints">
+        <h2>Endpoints and Methods</h2>
+
+        <!-- GET /recipes -->
+        <div class="endPoint">
+          <h3>GET /recipes</h3>
+          <p>
+            <strong>Description:</strong> Retrieves a list of all recipes
+            available in the database.
+          </p>
+          <p><strong>Example Request:</strong></p>
+          <pre><code>GET http://your-api-url.com/api/recipes</code></pre>
+          <p><strong>Response:</strong> Returns a JSON array of recipes.</p>
+        </div>
+
+        <!-- GET /recipes/{id} -->
+        <div class="endPoint">
+          <h3>GET /recipe/{id}</h3>
+          <p>
+            <strong>Description:</strong> Retrieves details of a specific recipe
+            by its unique ID.
+          </p>
+          <p><strong>Example Request:</strong></p>
+          <pre><code>GET http://your-api-url.com/api/recipe/chicken-and-vegetable-stir-fry</code></pre>
+          <p>
+            <strong>Response:</strong> Returns a JSON object containing the
+            recipe details.
+          </p>
+        </div>
+
+        <!-- POST /recipes -->
+        <div class="endPoint">
+          <h3>POST /recipe</h3>
+          <p>
+            <strong>Description:</strong> Adds a new recipe to the database.
+          </p>
+          <p><strong>Example Request Body:</strong></p>
+          <pre><code>{
+  "name": "New Recipe",
+  "ingredients": ["ingredient1", "ingredient2"],
+  "instructions": "Cooking instructions.",
+  "img": "URL_to_image"
+}</code></pre>
+          <p>
+            <strong>Response:</strong> Returns the newly created recipe with its
+            ID.
+          </p>
+        </div>
+
+        <!-- PUT /recipes/{id} -->
+        <div class="endPoint">
+          <h3>PUT /recipe/update/{id}</h3>
+          <p>
+            <strong>Description:</strong> Updates an existing recipe specified
+            by its ID.
+          </p>
+          <p><strong>Example Request Body:</strong></p>
+          <pre><code>{
+  "ingredients": ["ingredient1", "ingredient2"],
+  "instructions": "Updated cooking instructions.",
+  "img": "URL_to_image"
+}</code></pre>
+          <p><strong>Response:</strong> Returns the updated recipe details.</p>
+        </div>
+
+        <!-- DELETE /recipes/{id} -->
+        <div class="endPoint">
+          <h3>DELETE /recipe/delete/{id}</h3>
+          <p>
+            <strong>Description:</strong> Deletes a specific recipe from the
+            database using its ID.
+          </p>
+          <p><strong>Example Request:</strong></p>
+          <pre><code>DELETE http://your-api-url.com/api/recipe/delete/chicken-and-vegetable-stir-fry</code></pre>
+          <p>
+            <strong>Response:</strong> Returns a confirmation message of
+            deletion.
+          </p>
+        </div>
+      </section>
+
+      <section id="errors">
+        <h2>Error Handling</h2>
+        <p>
+          When interacting with the Recipe API, you might encounter errors.
+          Below are common error responses and their meanings:
+        </p>
+
+        <!-- Error 400 -->
+        <div class="error">
+          <h3>400 Bad Request</h3>
+          <p>
+            <strong>Description:</strong> The request could not be understood or
+            was missing required parameters.
+          </p>
+          <p>
+            <strong>Possible Fix:</strong> Check the request syntax and ensure
+            all required parameters are included.
+          </p>
+        </div>
+
+        <!-- Error 404 -->
+        <div class="error">
+          <h3>404 Not Found</h3>
+          <p>
+            <strong>Description:</strong> The requested resource could not be
+            found.
+          </p>
+          <p>
+            <strong>Possible Fix:</strong> Verify that the URL is correct and
+            that the resource exists.
+          </p>
+        </div>
+
+        <!-- Error 500 -->
+        <div class="error">
+          <h3>500 Internal Server Error</h3>
+          <p>
+            <strong>Description:</strong> An unexpected error occurred on the
+            server.
+          </p>
+          <p>
+            <strong>Possible Fix:</strong> If the problem persists, contact
+            support with details of the request.
+          </p>
+        </div>
+
+        <!-- Error 401 -->
+        <div class="error">
+          <h3>401 Unauthorized</h3>
+          <p>
+            <strong>Description:</strong> Authentication is required or has
+            failed.
+          </p>
+          <p>
+            <strong>Possible Fix:</strong> Ensure you are providing valid
+            authentication credentials.
+          </p>
+        </div>
+      </section>
+
+      <section id="examples">
+        <h2>Example Use Cases</h2>
+        <p>
+          Here are some example use cases for interacting with the Recipe API:
+        </p>
+
+        <!-- Retrieve All Recipes -->
+        <div class="example">
+          <h3>1. Retrieve All Recipes</h3>
+          <p>
+            <strong>Request:</strong>
+            <code>GET http://your-api-url.com/api/recipes</code>
+          </p>
+          <p>
+            <strong>Response:</strong> Returns a list of recipes with their
+            details.
+          </p>
+        </div>
+
+        <!-- Add a New Recipe -->
+        <div class="example">
+          <h3>2. Add a New Recipe</h3>
+          <p>
+            <strong>Request:</strong>
+            <code>POST http://your-api-url.com/api/recipes</code>
+          </p>
+          <p><strong>Request Body:</strong></p>
+          <pre><code>{
+  "name": "Spaghetti Carbonara",
+  "ingredients": ["spaghetti", "eggs", "pancetta", "cheese"],
+  "instructions": "Cook spaghetti, mix with eggs and cheese, add pancetta.",
+  "img": "URL_to_image"
+}</code></pre>
+          <p><strong>Response:</strong> Returns the newly added recipe.</p>
+        </div>
+
+        <!-- Update an Existing Recipe -->
+        <div class="example">
+          <h3>3. Update an Existing Recipe</h3>
+          <p>
+            <strong>Request:</strong>
+            <code>PUT http://your-api-url.com/api/recipes/{id}</code>
+          </p>
+          <p><strong>Request Body:</strong></p>
+          <pre><code>{
+  "name": "Updated Spaghetti Carbonara",
+  "ingredients": ["spaghetti", "eggs", "pancetta", "cheese", "black pepper"],
+  "instructions": "Cook spaghetti, mix with eggs and cheese, add pancetta and pepper.",
+  "img": "URL_to_image"
+}</code></pre>
+          <p><strong>Response:</strong> Returns the updated recipe.</p>
+        </div>
+
+        <!-- Delete a Recipe -->
+        <div class="example">
+          <h3>4. Delete a Recipe</h3>
+          <p>
+            <strong>Request:</strong>
+            <code>DELETE http://your-api-url.com/api/recipes/delete/{id}</code>
+          </p>
+          <p><strong>Response:</strong> Returns a confirmation of deletion.</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
