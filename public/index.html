@@ -21,7 +21,11 @@
       <section id="baseUrl">
         <h2>Base URL</h2>
         <p>All API requests should be made to the following base URL:</p>
-        <p><strong>http://your-api-url.com/api</strong></p>
+        <p>
+          <strong
+            >https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api</strong
+          >
+        </p>
         <p>This base URL serves as the root endpoint for all API operations.</p>
       </section>
 
@@ -36,7 +40,7 @@
             available in the database.
           </p>
           <p><strong>Example Request:</strong></p>
-          <pre><code>GET http://your-api-url.com/api/recipes</code></pre>
+          <pre><code>GET https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes</code></pre>
           <p><strong>Response:</strong> Returns a JSON array of recipes.</p>
         </div>
 
@@ -48,7 +52,7 @@
             by its unique ID.
           </p>
           <p><strong>Example Request:</strong></p>
-          <pre><code>GET http://your-api-url.com/api/recipe/chicken-and-vegetable-stir-fry</code></pre>
+          <pre><code>GET https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipe/chicken-and-vegetable-stir-fry</code></pre>
           <p>
             <strong>Response:</strong> Returns a JSON object containing the
             recipe details.
@@ -98,7 +102,7 @@
             database using its ID.
           </p>
           <p><strong>Example Request:</strong></p>
-          <pre><code>DELETE http://your-api-url.com/api/recipe/delete/chicken-and-vegetable-stir-fry</code></pre>
+          <pre><code>DELETE https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipe/delete/chicken-and-vegetable-stir-fry</code></pre>
           <p>
             <strong>Response:</strong> Returns a confirmation message of
             deletion.
@@ -177,7 +181,10 @@
           <h3>1. Retrieve All Recipes</h3>
           <p>
             <strong>Request:</strong>
-            <code>GET http://your-api-url.com/api/recipes</code>
+            <code
+              >GET
+              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes</code
+            >
           </p>
           <p>
             <strong>Response:</strong> Returns a list of recipes with their
@@ -190,7 +197,10 @@
           <h3>2. Add a New Recipe</h3>
           <p>
             <strong>Request:</strong>
-            <code>POST http://your-api-url.com/api/recipes</code>
+            <code
+              >POST
+              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes</code
+            >
           </p>
           <p><strong>Request Body:</strong></p>
           <pre><code>{
@@ -207,7 +217,10 @@
           <h3>3. Update an Existing Recipe</h3>
           <p>
             <strong>Request:</strong>
-            <code>PUT http://your-api-url.com/api/recipes/{id}</code>
+            <code
+              >PUT
+              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes/{id}</code
+            >
           </p>
           <p><strong>Request Body:</strong></p>
           <pre><code>{
@@ -224,7 +237,10 @@
           <h3>4. Delete a Recipe</h3>
           <p>
             <strong>Request:</strong>
-            <code>DELETE http://your-api-url.com/api/recipes/delete/{id}</code>
+            <code
+              >DELETE
+              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes/delete/{id}</code
+            >
           </p>
           <p><strong>Response:</strong> Returns a confirmation of deletion.</p>
         </div>
