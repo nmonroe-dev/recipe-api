@@ -99,7 +99,7 @@ MongoClient.connect(mongoUrl)
     app.put('/api/recipe/update/:id', (req, res) => {
         const id = req.params.id;
 
-        const {ingredients, instructions} = req.body;
+        const {ingredients, instructions, img} = req.body;
         if(!ingredients || !instructions) {
             res.status(400).json({error: 'Missing required fields'})
         }
@@ -109,7 +109,8 @@ MongoClient.connect(mongoUrl)
             {
                 $set: {
                     instructions: instructions,
-                    ingredients: ingredients
+                    ingredients: ingredients,
+                    img: img
                 }
             },
             {
