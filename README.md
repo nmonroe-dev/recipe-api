@@ -40,7 +40,7 @@ Welcome to the Recipe API documentation. This API allows you to manage recipes w
 
 ### 3. Add a New Recipe
 
-- **Endpoint**: `/recipe`
+- **Endpoint**: `/recipe/`
 - **Method**: `POST`
 - **Description**: Adds a new recipe to the database.
 
@@ -80,6 +80,15 @@ When interacting with the Recipe API, you might encounter errors. Below are comm
 - **Description**: Authentication is required or has failed.
 - **Possible Fix**: Ensure you are providing valid authentication credentials.
 
-## License
+### Contributing
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+### License
+
+This project is licensed under the MIT License.
+
+### Contact
+
+- GitHub: https://github.com/nmonroe-dev
+- Email: nmonroe.dev@gmail.com
