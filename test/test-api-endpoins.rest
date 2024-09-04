@@ -1,2 +1,2 @@
-GET http://localhost:3008/api/recipes
+GET https://bite-box-da0099d606eb.herokuapp.com/api/recipe/Chicken Pot Pie 
 

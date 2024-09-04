@@ -22,9 +22,7 @@
         <h2>Base URL</h2>
         <p>All API requests should be made to the following base URL:</p>
         <p>
-          <strong
-            >https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api</strong
-          >
+          <strong>https://bite-box-da0099d606eb.herokuapp.com/api/ </strong>
         </p>
         <p>This base URL serves as the root endpoint for all API operations.</p>
       </section>
@@ -40,7 +38,7 @@
             available in the database.
           </p>
           <p><strong>Example Request:</strong></p>
-          <pre><code>GET https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes</code></pre>
+          <pre><code>GET https://bite-box-da0099d606eb.herokuapp.com/api/recipes</code></pre>
           <p><strong>Response:</strong> Returns a JSON array of recipes.</p>
         </div>
 
@@ -52,7 +50,7 @@
             by its unique ID.
           </p>
           <p><strong>Example Request:</strong></p>
-          <pre><code>GET https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipe/chicken-and-vegetable-stir-fry</code></pre>
+          <pre><code>GET https://bite-box-da0099d606eb.herokuapp.com/api/recipe/Chicken Pot Pie </code></pre>
           <p>
             <strong>Response:</strong> Returns a JSON object containing the
             recipe details.
@@ -102,7 +100,7 @@
             database using its ID.
           </p>
           <p><strong>Example Request:</strong></p>
-          <pre><code>DELETE https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipe/delete/chicken-and-vegetable-stir-fry</code></pre>
+          <pre><code>DELETE https://bite-box-da0099d606eb.herokuapp.com/api/recipe/Chicken Pot Pie </code></pre>
           <p>
             <strong>Response:</strong> Returns a confirmation message of
             deletion.
@@ -182,8 +180,7 @@
           <p>
             <strong>Request:</strong>
             <code
-              >GET
-              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes</code
+              >GET https://bite-box-da0099d606eb.herokuapp.com/api/recipes</code
             >
           </p>
           <p>
@@ -199,8 +196,9 @@
             <strong>Request:</strong>
             <code
               >POST
-              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes</code
-            >
+              https://bite-box-da0099d606eb.herokuapp.com/api/recipe/Spaghetti
+              Carbonara
+            </code>
           </p>
           <p><strong>Request Body:</strong></p>
           <pre><code>{
@@ -219,12 +217,13 @@
             <strong>Request:</strong>
             <code
               >PUT
-              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes/{id}</code
+              https://bite-box-da0099d606eb.herokuapp.com/api/recipe/update/Spaghetti
+              Carbonara</code
             >
           </p>
           <p><strong>Request Body:</strong></p>
           <pre><code>{
-  "name": "Updated Spaghetti Carbonara",
+  "name": "Spaghetti Carbonara",
   "ingredients": ["spaghetti", "eggs", "pancetta", "cheese", "black pepper"],
   "instructions": "Cook spaghetti, mix with eggs and cheese, add pancetta and pepper.",
   "img": "URL_to_image"
@@ -239,7 +238,8 @@
             <strong>Request:</strong>
             <code
               >DELETE
-              https://morning-fjord-40195-ac44acea7d8a.herokuapp.com/api/recipes/delete/{id}</code
+              https://bite-box-da0099d606eb.herokuapp.com/api/recipe/delete/Spaghetti
+              Carbonara</code
             >
           </p>
           <p><strong>Response:</strong> Returns a confirmation of deletion.</p>
